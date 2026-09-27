@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+:root {
+  --background: #faf7f2;
+  --foreground: #181513;
+  --color-ochre: #d97706;
+  --color-gold: #f59e0b;
+  --color-parchment: #faf7f2;
+  --color-charcoal: #181513;
+  --color-saffron: #c2410c;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-jakarta), var(--font-devanagari), sans-serif;
+  --font-serif: var(--font-cinzel), var(--font-rozha), var(--font-devanagari), serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
