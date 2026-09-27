@@ -59,6 +59,9 @@ export default function Footer({ lang, t, scrollToSection, onOpenBooking }: Foot
             <button onClick={() => scrollToSection("pricing")} className="hover:text-amber-400">
               {t.nav.pricing}
             </button>
+            <button onClick={() => scrollToSection("reviews")} className="hover:text-amber-400">
+              {t.nav.reviews}
+            </button>
             <button onClick={onOpenBooking} className="hover:text-amber-400 font-semibold text-amber-300">
               {t.nav.consultation}
             </button>

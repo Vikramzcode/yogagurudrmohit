@@ -69,6 +69,9 @@ export default function Navbar({
             <button onClick={() => scrollToSection("pricing")} className="transition hover:text-amber-800">
               {t.nav.pricing}
             </button>
+            <button onClick={() => scrollToSection("reviews")} className="transition hover:text-amber-800">
+              {t.nav.reviews}
+            </button>
           </div>
 
           <div className="hidden sm:flex items-center gap-3">
@@ -129,6 +132,9 @@ export default function Navbar({
               </button>
               <button onClick={() => scrollToSection("pricing")} className="block w-full text-left text-sm font-medium text-stone-800">
                 {t.nav.pricing}
+              </button>
+              <button onClick={() => scrollToSection("reviews")} className="block w-full text-left text-sm font-medium text-stone-800">
+                {t.nav.reviews}
               </button>
               <button
                 onClick={() => {

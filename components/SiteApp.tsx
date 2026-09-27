@@ -9,6 +9,7 @@ import Protocols from "./Protocols";
 import Credentials from "./Credentials";
 import Gallery from "./Gallery";
 import Pricing from "./Pricing";
+import Reviews from "./Reviews";
 import Footer from "./Footer";
 import BookingModal from "./BookingModal";
 import { BILINGUAL_CONTENT, Lang } from "./content";
@@ -72,6 +73,8 @@ export default function SiteApp() {
       <Gallery t={t} />
 
       <Pricing lang={lang} t={t} />
+
+      <Reviews t={t} />
 
       <Footer lang={lang} t={t} scrollToSection={scrollToSection} onOpenBooking={() => handleOpenBooking("")} />
 
