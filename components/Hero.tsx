@@ -21,7 +21,7 @@ export default function Hero({ t, introComplete, onOpenBooking, onStartBreathing
   );
 
   return (
-    <section className="relative min-h-[85vh] md:min-h-screen w-full overflow-hidden">
+    <section className="relative min-h-[85svh] md:min-h-screen w-full overflow-hidden">
       {reducedMotion ? (
         <Image
           src="/images/hero-meditation.png"
@@ -50,12 +50,12 @@ export default function Hero({ t, introComplete, onOpenBooking, onStartBreathing
       <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/10" />
       <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/10 to-transparent" />
 
-      {/* Credential badges, top right */}
+      {/* Credential badges, top right (hidden on small screens: too little vertical room between the nav and the headline to avoid overlap) */}
       <motion.div
         initial={{ opacity: 0, y: -12 }}
         animate={{ opacity: introComplete ? 1 : 0, y: introComplete ? 0 : -12 }}
         transition={{ duration: 0.6, delay: 0.25 }}
-        className="absolute top-24 sm:top-28 right-4 sm:right-8 z-10 flex flex-col items-end gap-3"
+        className="absolute top-24 sm:top-28 right-4 sm:right-8 z-10 hidden sm:flex flex-col items-end gap-3"
       >
         <div className="flex items-center gap-3 rounded-2xl border border-white/20 bg-black/40 backdrop-blur-md px-4 py-3 shadow-xl">
           <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-amber-500 to-amber-700 text-white">
@@ -95,7 +95,7 @@ export default function Hero({ t, introComplete, onOpenBooking, onStartBreathing
       </motion.div>
 
       {/* Text content, bottom left */}
-      <div className="relative z-10 flex min-h-[85vh] md:min-h-screen w-full items-end">
+      <div className="relative z-10 flex min-h-[85svh] md:min-h-screen w-full items-end">
         <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 pb-16 sm:pb-20 md:pb-24">
           <div className="max-w-xl space-y-6 text-left">
             <motion.div

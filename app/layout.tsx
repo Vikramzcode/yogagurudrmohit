@@ -43,6 +43,11 @@ export const metadata: Metadata = {
   alternates: {
     languages: { "en-IN": "https://yogagurudrmohit.com", "hi-IN": "https://yogagurudrmohit.com" },
   },
+  // The site already has its own Hindi/English toggle. Chrome's automatic
+  // "Translate this page?" (Google Translate) rewrites the DOM word-by-word
+  // and breaks the per-character headline reveal animation into garbled
+  // text, so it's turned off here rather than fought component-by-component.
+  other: { google: "notranslate" },
 };
 
 const jsonLd = {
@@ -70,7 +75,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="hi"
-      className={`${cinzel.variable} ${rozhaOne.variable} ${jakarta.variable} ${notoDevanagari.variable} h-full antialiased`}
+      translate="no"
+      className={`${cinzel.variable} ${rozhaOne.variable} ${jakarta.variable} ${notoDevanagari.variable} h-full antialiased notranslate`}
     >
       <head>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />

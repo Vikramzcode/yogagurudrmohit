@@ -32,7 +32,7 @@ export default function RevealText({ text, start, className, delayStart = 0, sta
   const parts = useMemo(() => graphemes(text), [text]);
 
   return (
-    <span className={className} aria-label={text}>
+    <span className={`notranslate ${className ?? ""}`} translate="no" aria-label={text}>
       {parts.map((ch, i) => (
         <motion.span
           key={`${text}-${i}`}
