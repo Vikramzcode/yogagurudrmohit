@@ -3,7 +3,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { Calendar, Globe2, Menu, X } from "lucide-react";
 import Image from "next/image";
-import { CONTACT, Content, Lang } from "./content";
+import { Content, Lang } from "./content";
 
 interface NavbarProps {
   lang: Lang;
@@ -66,14 +66,9 @@ export default function Navbar({
             <button onClick={() => scrollToSection("gallery")} className="transition hover:text-amber-800">
               {t.nav.gallery}
             </button>
-            <a
-              href={CONTACT.youtube}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-1.5 text-stone-700 hover:text-amber-800 transition"
-            >
-              <span>YouTube (51K+)</span>
-            </a>
+            <button onClick={() => scrollToSection("pricing")} className="transition hover:text-amber-800">
+              {t.nav.pricing}
+            </button>
           </div>
 
           <div className="hidden sm:flex items-center gap-3">
@@ -131,6 +126,9 @@ export default function Navbar({
               </button>
               <button onClick={() => scrollToSection("gallery")} className="block w-full text-left text-sm font-medium text-stone-800">
                 {t.nav.gallery}
+              </button>
+              <button onClick={() => scrollToSection("pricing")} className="block w-full text-left text-sm font-medium text-stone-800">
+                {t.nav.pricing}
               </button>
               <button
                 onClick={() => {
